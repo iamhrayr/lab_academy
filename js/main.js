@@ -20,29 +20,40 @@
 $(function() {
 
   // var controller = new ScrollMagic.Controller();
+    var controller = new ScrollMagic.Controller();
 
-  // var blockTween = new TweenMax.to('.lab-svg', 1.5, {
-  //   backgroundColor: 'red'
-  // });
-
-  // var containerScene = new ScrollMagic.Scene({
-  //     triggerElement: '.scroll-down-icon'
-  //   })
-  //   .setTween(blockTween)
-  //   .addIndicators()
-  //   .addTo(controller);
+    var tl = new TimelineMax();
+    tl.to('#intro-logo', 1.5, {width: '250px'})
+        .to('#intro-text', .5, {scale: 1.3, opacity: 0}, '0');
 
 
-	var controller = new ScrollMagic.Controller();
-
+    // freeze top section
 	var scene = new ScrollMagic.Scene({
-		triggerElement: "#intro", 
-		triggerHook: "onLeave",
-		duration: 900
+		triggerElement: '#intro', 
+		triggerHook: 'onLeave',
+		duration: 800
 	})
 	.setPin("#intro")
+    .setTween(tl)
 	.addIndicators()
 	.addTo(controller);
+
+
+    // // tweenmax of svg
+    // var tm = new TweenMax();
+    // tm.to('.lab-svg', 1.5, {width: '250px'})
+
+    // // svg animation
+    // var scene = new ScrollMagic.Scene({
+    //     triggerElement: '#intro-logo',
+    //     triggerHook: 'onLeave',
+    //     duration: 400
+    // })
+    // .setPin(".lab-svg")
+    // // .setTween(tm)
+    // .addIndicators()
+    // .addTo(controller);
+
 
 
 });

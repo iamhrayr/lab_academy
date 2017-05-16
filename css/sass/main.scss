@@ -354,6 +354,7 @@ $step: 0;
 	@include bg-image('intro-bg.jpg');
 }
 .intro-logo {
+	@include transition(all .3s);
 	clip-path: url(#logoPath);
 }
 .lab-svg {
@@ -361,6 +362,15 @@ $step: 0;
 }
 @media #{$medium-and-up} {
 
+}
+.will-animate {
+	@include transition(.4s all);
+}
+.scroll-down-btn {
+	position: absolute;
+	bottom: 60px;
+	left: 50%;
+	margin-left: -18px;
 }
 .scroll-down-icon {
 	width: 36px;
