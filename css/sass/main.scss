@@ -1,7 +1,7 @@
 // variables
 $font-primary: 'Roboto', sans-serif;
 $font-secondary: 'Roboto Slab', serif;
-$container: 1170px;
+$container: 100%;
 $font-size: 16px;
 $color-text: #333;
 $color-primary: #e7d5c7;
@@ -133,7 +133,7 @@ button {
 }
 
 .img-responsive	{
-	max-width: 100%;
+	width: 100%;
 }
 .full-width {
 	width: 100%;
@@ -359,6 +359,12 @@ $step: 0;
 }
 .lab-svg {
 	opacity: .5;
+}
+.lab-svg-wrapper {
+	@include transform(translate3d(-50%,-50%,0));
+	position: absolute;
+	top: 50%;
+	left: 50%;
 }
 @media #{$medium-and-up} {
 

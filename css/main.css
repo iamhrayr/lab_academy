@@ -955,9 +955,9 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1170px; }
+  width: 100%; }
   .container.container-sm {
-    width: 702px; }
+    width: 60%; }
 
 .clearfix {
   clear: both; }
@@ -969,7 +969,7 @@ button {
   background-color: transparent; }
 
 .img-responsive {
-  max-width: 100%; }
+  width: 100%; }
 
 .full-width {
   width: 100%; }
@@ -2381,6 +2381,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .lab-svg {
   opacity: .5; }
+
+.lab-svg-wrapper {
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -o-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  position: absolute;
+  top: 50%;
+  left: 50%; }
 
 .will-animate {
   -webkit-transition: 0.4s all;

@@ -22,37 +22,66 @@ $(function() {
   // var controller = new ScrollMagic.Controller();
     var controller = new ScrollMagic.Controller();
 
+    
+
+
+
+    // intro scene
     var tl = new TimelineMax();
-    tl.to('#intro-logo', 1.5, {width: '250px'})
-        .to('#intro-text', .5, {scale: 1.3, opacity: 0}, '0');
+    tl.to('#intro-logo', .5, {autoAlpha: .8, y: '-100px'})
+        .to('#intro-text', .5, {scale: 1.3, autoAlpha: 0}, '0')
+        .fromTo('.lab-svg-wrapper', .7, {y: -30, autoAlpha: 0, scale: .9}, {y: 0, autoAlpha: 1, scale: 1});
 
-
-    // freeze top section
 	var scene = new ScrollMagic.Scene({
-		triggerElement: '#intro', 
+		// triggerElement: '#intro', 
 		triggerHook: 'onLeave',
-		duration: 800
+		duration: 800,
+
 	})
 	.setPin("#intro")
     .setTween(tl)
 	.addIndicators()
 	.addTo(controller);
 
+	var scene = new ScrollMagic.Scene({
+		// triggerElement: '#intro', 
+		offset: 800,
+		triggerHook: 'onLeave',
+		duration: 800,
 
-    // // tweenmax of svg
-    // var tm = new TweenMax();
-    // tm.to('.lab-svg', 1.5, {width: '250px'})
+	})
+	.setPin("#intro")
+    // .setTween(tl)
+	.addIndicators()
+	.addTo(controller);
 
-    // // svg animation
-    // var scene = new ScrollMagic.Scene({
-    //     triggerElement: '#intro-logo',
-    //     triggerHook: 'onLeave',
-    //     duration: 400
-    // })
-    // .setPin(".lab-svg")
-    // // .setTween(tm)
-    // .addIndicators()
-    // .addTo(controller);
+
+	// svg & mouse scene
+	// var tm = TweenMax.to('.scroll-down-btn', .7, {opacity: 0}) 
+	// var scene = new ScrollMagic.Scene({
+	// 	offset: 810,
+	// 	duration: 200
+	// })
+	// .setPin('.lab-svg-wrapper')
+	// .setTween(tm)
+	// .addIndicators()
+	// .addTo(controller);
+
+	// svg element scene
+	
+	// var tm = TweenMax.fromTo('.lab-svg-wrapper', .7, {x: 0}, {x: '50%'}) 
+	// var scene = new ScrollMagic.Scene({
+	// 	offset: 1200,
+	// 	duration: 0
+	// })
+	// .setPin('.lab-svg-wrapper')
+	// .setTween(tm)
+	// .addIndicators()
+	// .addTo(controller);
+
+
+
+
 
 
 
