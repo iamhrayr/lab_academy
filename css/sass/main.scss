@@ -6,6 +6,7 @@ $font-size: 16px;
 
 $yellow: #daac55;
 
+$color-input-bg: #ececec;
 $color-text: #333;
 $color-primary: $yellow;
 $color-secondary: null;
@@ -215,6 +216,12 @@ h1, h2, h3, h4, h5, h6 {
 .text-right {
 	text-align: right;
 }
+.uppercase {
+	text-transform: uppercase; 
+}
+.lowercase {
+	text-transform: lowercase; 
+}
 .small, small {
 	font-size: .8em;
 }
@@ -377,6 +384,21 @@ $step: 0;
 			display: block;
 			margin: 20px auto 0;
 		}
+	}
+}
+
+
+// Forms
+.form-control {
+	font-size: 16px;
+	padding: 10px;
+	background-color: $color-input-bg;
+	border: none;
+	width: 100%;
+}
+.form-row {
+	+ .form-row {
+		margin-top: 20px;
 	}
 }
 

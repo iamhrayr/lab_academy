@@ -1043,6 +1043,12 @@ h1, h2, h3, h4, h5, h6 {
 .text-right {
   text-align: right; }
 
+.uppercase {
+  text-transform: uppercase; }
+
+.lowercase {
+  text-transform: lowercase; }
+
 .small, small {
   font-size: .8em; }
 
@@ -2567,6 +2573,16 @@ h1, h2, h3, h4, h5, h6 {
       background-color: #daac55;
       display: block;
       margin: 20px auto 0; }
+
+.form-control {
+  font-size: 16px;
+  padding: 10px;
+  background-color: #ececec;
+  border: none;
+  width: 100%; }
+
+.form-row + .form-row {
+  margin-top: 20px; }
 
 /* Intro section
 ============================== */
