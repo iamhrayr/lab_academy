@@ -1,7 +1,7 @@
 // variables
 $font-primary: 'Roboto', sans-serif;
 $font-secondary: 'Roboto Slab', serif;
-$container: 100%;
+$container: 1170px;
 $font-size: 16px;
 $color-text: #333;
 $color-primary: #e7d5c7;
@@ -351,7 +351,7 @@ $step: 0;
 /* Intro section
 ============================== */
 .intro {
-	@include bg-image('intro-bg.jpg');
+	@include bg-image('intro-bg.jpg', 'cover');
 }
 .intro-logo {
 	@include transition(all .3s);
@@ -426,6 +426,7 @@ $step: 0;
 ============================== */
 .about-project {
 	background-color: #faf7f1;
+	padding-top: 160px;
 }
 
 
