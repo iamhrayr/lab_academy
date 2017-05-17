@@ -1,10 +1,13 @@
 // variables
 $font-primary: 'Roboto', sans-serif;
 $font-secondary: 'Roboto Slab', serif;
-$container: 1170px;
+$container: 1070px;
 $font-size: 16px;
+
+$yellow: #daac55;
+
 $color-text: #333;
-$color-primary: #e7d5c7;
+$color-primary: $yellow;
 $color-secondary: null;
 
 $image-folder: '../img/';
@@ -154,6 +157,9 @@ button {
 	padding-left: 0;
 	list-style-type: none;
 }
+.bg-cover {
+	@include bg-cover;
+}
 
 
 
@@ -173,6 +179,26 @@ button {
 }
 .align-center {
 	align-items: center;
+}
+.equal-items>* {
+	flex-grow: 1;
+    // flex-basis: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.bg-yellow {
+	background-color: $yellow;
+}
+.yellow {
+	color: $yellow;
+}
+.bg-white {
+	background-color: #fff;
+}
+white {
+	color: #fff;
 }
 
 
@@ -279,6 +305,12 @@ $step: 0;
 		padding-top: #{$step}px;
 		padding-bottom: #{$step}px;
 	}
+	.m-#{$step} {
+		margin: #{$step}px;
+	}
+	.p-#{$step} {
+		padding: #{$step}px;
+	}
 	$step: $step + 5;
 }
 
@@ -323,8 +355,8 @@ $step: 0;
 }
 .home-section {
 	@extend .flex;
-	@extend .align-center;
-	height: 100vh;
+	// @extend .align-center;
+	// height: 100vh;
 	// padding-top: 60px;
 	// padding-bottom: 60px;
 }
@@ -335,13 +367,15 @@ $step: 0;
 		position: relative;
 		&:after {
 			content: '';
-			position: absolute;
-			left: 100%;
-			top: 32px;
-			margin-left: 20px;
+			// position: absolute;
+			// left: 100%;
+			// top: 32px;
+			// margin-left: 20px;
 			height: 2px;
-			width: 260px;
+			width: 160px;
 			background-color: $color-primary;
+			display: block;
+			margin: 20px auto 0;
 		}
 	}
 }
@@ -352,6 +386,7 @@ $step: 0;
 ============================== */
 .intro {
 	@include bg-image('intro-bg.jpg', 'cover');
+	height: 100vh;
 }
 .intro-logo {
 	@include transition(all .3s);
@@ -426,7 +461,6 @@ $step: 0;
 ============================== */
 .about-project {
 	background-color: #faf7f1;
-	padding-top: 160px;
 }
 
 

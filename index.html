@@ -7,6 +7,7 @@
 
 	<!-- CSS -->
 	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.fullpage/2.9.4/jquery.fullpage.min.css"> -->
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -21,7 +22,7 @@
 
 
 	<main id="main-wrapper">
-		<section id="intro" class="home-section intro">
+		<section id="intro" class="home-section align-center intro">
 			<div class="container container-sm text-center white">
 				<!-- <img src="img/logo.svg" class="intro-logo full-width" alt=""> -->
 				<img src="img/logo-with-bg.png" id="intro-logo" class="intro-logo will-animate" alt="">
@@ -58,20 +59,47 @@
 				</div>
 			</div>
 		</section>
-		<section class="home-section about-project">
-			<div class="container">
-				<div class="col-row">
-					<div class="col m6">
-						<img src="img/about-img.jpg" class="img-responsive" alt="">
-					</div>
-					<div class="col m6">
-						<h3 class="section-title"><span>About Project</span></h3>
-						<p class="fs-xl mt-120">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius.</p>
+		<section class="home-section bg-yellow py-60">
+			<div class="container container-sm white">
+				<p class="fw-light fs-xl text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur distinctio ad fuga neque incidunt ex id eligendi amet unde ea perferendis aliquam, eaque officia atque praesentium, obcaecati quas, in velit.</h3>
+			</div>
+		</section>
+		<section class="home-section" id="popo">
+			<div class="flex equal-items">
+				<div class="bg-cover" style="background-image: url(img/listen-img.jpg)"></div>
+				<div class="text-center">
+					<div class="p-40">
+						<h3 class="section-title wow fadeInDown"><span>Listen</span></h3>
+						<img src="img/icons/listen.svg" width="70" alt="" class="wow fadeIn">
+						<p class="fs-xl mt-40 wow fadeInUp">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
 					</div>
 				</div>
 			</div>
 		</section>
-		<br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<section class="home-section about-project">
+			<div class="flex equal-items">
+				<div class="text-center">
+					<div class="p-40">
+						<h3 class="section-title reveal fade-down"><span>Analyze</span></h3>
+						<img src="img/icons/analyze.svg" width="70" alt="" class="reveal fade-in">
+						<p class="fs-xl mt-40 reveal fade-up">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
+					</div>
+				</div>
+				<div class="bg-cover" style="background-image: url(img/analyze-img.jpg)"></div>
+			</div>
+		</section>
+		<section class="home-section about-project">
+			<div class="flex equal-items">
+				<div class="bg-cover" style="background-image: url(img/become-img.jpg)"></div>
+				<div class="text-center">
+					<div class="p-40">
+						<h3 class="section-title reveal fade-down"><span>Become</span></h3>
+						<img src="img/icons/become.svg" width="70" alt="" class="reveal fade-in">
+						<p class="fs-xl mt-40 reveal fade-up">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 	
 	
@@ -82,6 +110,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+	<!-- <script src="js/noframework.waypoints.js"></script> -->
+
 	<script src="js/main.js"></script>
 
 </body>

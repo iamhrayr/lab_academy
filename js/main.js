@@ -2,8 +2,8 @@ $(function() {
 
     // smooth wheel scroll
     // var $window = $(window);
-    // var scrollTime = .5;
-    // var scrollDistance = 170;
+    // var scrollTime = .3;
+    // var scrollDistance = 200;
 
     // $window.on("mousewheel DOMMouseScroll", function(event){
     //     event.preventDefault(); 
@@ -29,7 +29,7 @@ $(function() {
     var tl = new TimelineMax()
         .to('#intro-logo', .5, {autoAlpha: .8, y: '-100px'})
         .to('#intro-text', .5, {scale: 1.3, autoAlpha: 0}, '0')
-        .fromTo('.lab-svg-wrapper', .7, {y: -30, autoAlpha: 0, scale: .9}, {y: 0, autoAlpha: 1, scale: 1});
+        .fromTo('.lab-svg-wrapper', .7, {y: -30, autoAlpha: 0, scale: .9}, {y: 0, autoAlpha: 1, scale: '1․5'});
 
     var scene = new ScrollMagic.Scene({
         // triggerElement: '#intro', 
@@ -41,38 +41,58 @@ $(function() {
         .addTo(controller);
 
 
-    var tl = new TimelineMax()
-        .to('#intro-logo', 1, {autoAlpha: .8, y: '-700'})
-        .to('.lab-svg-wrapper', 1, {y: -470}, '0.1')
-        .to('.scroll-down-btn', .5, {scale: 1.5, opacity: 0});
+    // var tl = new TimelineMax()
+    //     .to('#intro-logo', 2, {autoAlpha: .8, y: '-700'})
+    //     .to('.lab-svg-wrapper', 1, {y: -470}, '1')
+    //     .to('.scroll-down-btn', .5, {scale: 1.5, opacity: 0});
 
-    var scene = new ScrollMagic.Scene({
-        // triggerElement: '#intro', 
-        offset: 800,
-        triggerHook: 'onLeave',
-        duration: 1000
-    }).setPin("#intro")
-        .setTween(tl)
-        .addIndicators()
-        .addTo(controller);
-
-
-    var scene = new ScrollMagic.Scene({
-        // triggerElement: '#intro', 
-        offset: 1800,
-        // triggerHook: 'onLeave',
-        duration: 0
-    }).setPin(".lab-svg-wrapper")
-        // .setPin(".about-project")
-        // .setTween(tl)
-        // .on('end', function(){
-        //     new TimelineMax().to('#line, #listen, #analyze, #become', 1, {autoAlpha: .2})
-        // })
-        .addIndicators()
-        .addTo(controller);
+    // var scene = new ScrollMagic.Scene({
+    //     // triggerElement: '#intro', 
+    //     offset: 800,
+    //     triggerHook: 'onLeave',
+    //     duration: 1000
+    // })
+    //     .setPin("#intro")
+    //     .setTween(tl)
+    //     .addIndicators()
+    //     .addTo(controller);
 
 
+    // reveal items
+    // var tl = new TimelineMax()
+    //     .staggerFromTo('.reveal.fade-in', 1.8, {opacity: 0}, {opacity: 1}, .2, '0')
+    //     .staggerFromTo('.reveal.fade-down', 1.2, {y: -30, opacity: 0}, {y: 0, opacity: 1}, .2, '0')
+    //     .staggerFromTo('.reveal.fade-up', 1.2, {y: 30, opacity: 0}, {y: 0, opacity: 1}, .2, '0');
 
+    // var scene = new ScrollMagic.Scene({
+    //     triggerElement: '.reveal',
+    //     reverse: false
+    // })
+    // .setTween(tl)
+    // .addTo(controller);
+
+
+
+    // var waypoint = new Waypoint({
+    //     element: document.querySelector('reveal'),
+    //     handler: function(direction) {
+    //         console.log('Scrolled to waypoint!')
+    //     }
+    // })
+
+    // var waypoints = $('#popo').waypoint({
+    //     handler: function(direction) {
+    //         console.log('asdasd')
+    //         // notify(this.element.id + ' hit')
+    //     }
+    // }, {
+    //     offset: 'bottom-in-view'
+    // })
+
+
+
+    // init wow
+    new WOW().init();
 
    
 
