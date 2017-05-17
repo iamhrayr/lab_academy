@@ -2383,6 +2383,11 @@ h1, h2, h3, h4, h5, h6 {
   opacity: .5; }
 
 .lab-svg-wrapper {
+  -webkit-transition: transform 0.4s;
+  -moz-transition: transform 0.4s;
+  -ms-transition: transform 0.4s;
+  -o-transition: transform 0.4s;
+  transition: transform 0.4s;
   -webkit-transform: translate3d(-50%, -50%, 0);
   -moz-transform: translate3d(-50%, -50%, 0);
   -ms-transform: translate3d(-50%, -50%, 0);
@@ -2390,7 +2395,8 @@ h1, h2, h3, h4, h5, h6 {
   transform: translate3d(-50%, -50%, 0);
   position: absolute;
   top: 50%;
-  left: 50%; }
+  left: 50%;
+  opacity: 0; }
 
 .will-animate {
   -webkit-transition: 0.4s all;

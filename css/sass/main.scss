@@ -361,10 +361,12 @@ $step: 0;
 	opacity: .5;
 }
 .lab-svg-wrapper {
+	@include transition(transform .4s);
 	@include transform(translate3d(-50%,-50%,0));
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	opacity: 0;
 }
 @media #{$medium-and-up} {
 
