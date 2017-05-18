@@ -4,7 +4,7 @@ $font-secondary: 'Roboto Slab', serif;
 $container: 1070px;
 $font-size: 16px;
 
-$yellow: #daac55;
+$yellow: #f3be5a;
 
 $color-input-bg: #ececec;
 $color-text: #333;
@@ -403,6 +403,14 @@ $step: 0;
 }
 
 
+// Buttons 
+.btn {
+	padding: 10px 30px;
+	color: #fff;
+	cursor: pointer;
+}
+
+
 
 /* Intro section
 ============================== */
@@ -412,7 +420,8 @@ $step: 0;
 }
 .intro-logo {
 	@include transition(all .3s);
-	clip-path: url(#logoPath);
+	// clip-path: url(#logoPath);
+	opacity: .7;
 }
 .lab-svg {
 	opacity: .5;

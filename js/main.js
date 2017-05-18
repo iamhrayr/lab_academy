@@ -1,22 +1,22 @@
 $(function() {
 
     // smooth wheel scroll
-    // var $window = $(window);
-    // var scrollTime = .3;
-    // var scrollDistance = 200;
+    var $window = $(window);
+    var scrollTime = .3;
+    var scrollDistance = 200;
 
-    // $window.on("mousewheel DOMMouseScroll", function(event){
-    //     event.preventDefault(); 
-    //     var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
-    //     var scrollTop = $window.scrollTop();
-    //     var finalScroll = scrollTop - parseInt(delta*scrollDistance);
-    //     TweenMax.to($window, scrollTime, {
-    //         scrollTo : { y: finalScroll, autoKill:true },
-    //             ease: Power1.easeOut,
-    //             overwrite: 5                            
-    //         }
-    //     );
-    // });
+    $window.on("mousewheel DOMMouseScroll", function(event){
+        event.preventDefault(); 
+        var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+        var scrollTop = $window.scrollTop();
+        var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+        TweenMax.to($window, scrollTime, {
+            scrollTo : { y: finalScroll, autoKill:true },
+                ease: Power1.easeOut,
+                overwrite: 5
+            }
+        );
+    });
 
 
 
@@ -27,7 +27,7 @@ $(function() {
 
     // intro scene
     var tl = new TimelineMax()
-        .to('#intro-logo', .5, {autoAlpha: .8, y: '-100px'})
+        .to('#intro-logo', .5, {autoAlpha: .8, scale: .7, y: '-70px'})
         .to('#intro-text', .5, {scale: 1.3, autoAlpha: 0}, '0')
         .fromTo('.lab-svg-wrapper', .7, {y: -30, autoAlpha: 0, scale: .9}, {y: 0, autoAlpha: 1, scale: '1․5'});
 
@@ -37,7 +37,7 @@ $(function() {
         duration: 800,
     }).setPin("#intro")
         .setTween(tl)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller);
 
 
