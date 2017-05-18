@@ -950,7 +950,8 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 300;
-  line-height: 1.5; }
+  line-height: 1.5;
+  min-width: 1070px; }
 
 .container {
   margin-left: auto;
@@ -967,6 +968,10 @@ button {
   margin: 0;
   border: 0;
   background-color: transparent; }
+
+hr {
+  border: none;
+  border-top: solid 1px #dbdbdb; }
 
 .img-responsive {
   width: 100%; }
@@ -1028,7 +1033,7 @@ button {
 .bg-white {
   background-color: #fff; }
 
-white {
+.white {
   color: #fff; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2517,6 +2522,17 @@ h1, h2, h3, h4, h5, h6 {
 .p-150 {
   padding: 150px; }
 
+footer {
+  background-color: #31302b; }
+
+.footer-bottom {
+  background-color: #1d1c1b;
+  padding: 20px; }
+  .footer-bottom p {
+    margin: 0;
+    color: #fff;
+    text-align: center; }
+
 .section-nav {
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -2604,6 +2620,10 @@ h1, h2, h3, h4, h5, h6 {
   -o-transition: all 0.3s;
   transition: all 0.3s;
   opacity: .7; }
+
+.intro-text {
+  font-size: 50px;
+  font-weight: 100; }
 
 .lab-svg {
   opacity: .5; }
